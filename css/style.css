@@ -1,0 +1,149 @@
+
+
+
+body {
+    background-image: url("../images/nightlife.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header{
+    text-align: center;
+    font-size: 440%;
+    /* font-family: 'BenchNine', sans-serif; */
+    font-family: 'Shrikhand', cursive;
+    /* color: white; */
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: yellow;
+}
+
+#navbar {
+    opacity: .9;
+    height: 60px;
+    border-bottom: 2px yellow solid;
+    background-color: rgb(70, 33, 33);
+    
+}
+
+#navbar-font {
+    font-family: 'Shrikhand', cursive;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: yellow;
+    font-size: 30px;
+    
+}
+
+#flights-area {
+    margin: auto;
+    opacity: .9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 0;
+    border:rgb(70, 33, 33) solid 2px;
+}
+
+.card-header {
+    font-family: 'Shrikhand', cursive;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: yellow;
+    font-size: 20px;
+    height: 30px;
+    padding: 0 10px;
+    background-color: rgb(70, 33, 33);
+    border:rgb(70, 33, 33) solid 2px;
+    border-radius: 0;
+}
+
+#flights {
+    white-space: nowrap;
+    overflow: auto;
+    color: black;
+    height: 150px;
+    border-radius: 0;
+}
+
+#genFlight {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+
+}
+
+#placesArea {
+    opacity: .9;
+    width: 25%;
+    margin: 10px;
+    height:600px;
+    color:black ;
+    overflow: auto;
+    display: inline-block;
+    float: left;
+    border-radius: 0;
+    border:rgb(70, 33, 33) solid 2px;
+}
+
+#map {
+    width: 45%;
+    float: left;  
+    margin: 10px 15px;
+    height: 600px;
+    overflow: auto;
+    border-radius: 0;
+    border:rgb(70, 33, 33) solid 2px;
+
+}
+
+#diningArea {
+    opacity: .9;
+    width: 25%;
+    margin: 10px;
+    height:600px;
+    color:black ;
+    overflow: auto;
+    display: inline-block;
+    float: left;
+    border-radius: 0;
+    border:rgb(70, 33, 33) solid 2px;
+}
+.card-header:first-child {
+    border-radius: 0;
+}
+
+#pac-input {
+    position: relative;
+    right: 880px;
+    float: left;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(46, 22, 22);
+    color: yellow;
+    border: yellow 2px solid;
+}
+
+#form{
+    border-style: solid;
+    padding: 2%;
+    background-color: rgb(0,0,0,0.2);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 8px;
+    margin-top: 10%;
+    /* opacity:0.5 ; */
+    border-width: 1px;
+    font-size: 295%;
+    /* color: azure; */
+    border-color: rgb(0,0,0,0.5);
+    /* font-family: 'BenchNine', sans-serif; */
+    font-family: 'Shrikhand', cursive;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: yellow;
+    
+
+}
+#submit {
+    background-color: yellow;
+    color: red;
+    border: yellow 1px solid;
+
+}
