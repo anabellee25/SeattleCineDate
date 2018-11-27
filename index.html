@@ -11,16 +11,18 @@
 <body>
 
 
-<div id="header">
-    Travel BOOGIE
+<div id="header" class="unhidden">
+    Travel Boogie🕺🏻
 </div>
 
- 
+<div  id="description">
+ <p>Search for the hottest nightclubs to boogie the night away in cities around the world.
+    We also provide the local weather so you can make sure you plan your outfits, and hair, accordingly.
+    Need some place to grub after a long night of dancing? We will give you some of the top rated places to go!
+ </p>
+</div>
 
-    
-
-
-<div id="form">
+<div id="form" class="unhidden">
     <div class="container">
         <div class="form-group">
          <label for="exampleInputEmail1">Where To!</label>
@@ -30,18 +32,72 @@
             <label for="exampleInputPassword1">From</label>
             <input type="text" class="form-control" id="currentPlace" placeholder="Current Place">
         </div>
-        <button type="submit" id="submit" class="btn btn-primary">Let's BOOGIE</button>
+        <button type="submit" id="submit" class="btn btn-primary">Let's BOOGIE 🕺🏻</button>
       </div>
 </div>
 
+<!-- hidden elements below. Will show once submit button is pressed  -->
+<nav id="navbar" class="navbar navbar-light hidden">
+    <a id="navbar-font" class="navbar-brand" href="#!">Travel Boogie</a>
+    <input id="pac-input" class="controls" type="text" placeholder="New Destination?">  
+</nav>
 
+<div class="row hidden" id="flightsDiv">
+  <div id="flights-area" class="card">
+    <div class="card-header">
+      Upcoming Weather Forecast
+    </div>
+    <div id="flights" class="d-inline-flex flex-row bd-highlight mb-3">
+        
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
+    </div>
+  </div>
+</div>
 
+<div id="placesArea" class="card hidden">
+    <div class="card-header">
+            Nightlife Destinations
+    </div>
+    <div class="card-body">
+        <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="p-2 bd-highlight">Flex item 1</div>
+                <div class="p-2 bd-highlight">Flex item 2</div>
+                <div class="p-2 bd-highlight">Flex item 3</div>
+                <div class="p-2 bd-highlight">Flex item 1</div>
+                <div class="p-2 bd-highlight">Flex item 2</div>     
+        </div>  
+    </div>
+</div>
+<div id="map" class="jumbotron hidden">
+</div>
 
-
-
+<div id="diningArea" class="card hidden">
+  <div class="card-header">
+          Top Rated Places to Dine
+  </div>
+  <div class="card-body">
+      <div class="d-flex flex-column bd-highlight mb-3">
+              <div class="p-2 bd-highlight">Flex item 1</div>
+              <div class="p-2 bd-highlight">Flex item 2</div>
+              <div class="p-2 bd-highlight">Flex item 3</div>
+              <div class="p-2 bd-highlight">Flex item 1</div>
+              <div class="p-2 bd-highlight">Flex item 2</div>     
+      </div>  
+  </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="js/hide.js"></script>
 <script src="js/Google.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8NiCJndcIn85_FDZyrsNSCwKpXYEddCY&libraries=places&callback=initAutocomplete"
+  async defer></script>
 
 
 </body>

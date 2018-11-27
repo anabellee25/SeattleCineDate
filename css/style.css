@@ -9,6 +9,7 @@ body {
 
 #header{
     text-align: center;
+    margin-top: 20px;
     font-size: 440%;
     /* font-family: 'BenchNine', sans-serif; */
     font-family: 'Shrikhand', cursive;
@@ -17,6 +18,17 @@ body {
     color: yellow;
 }
 
+#description {
+    margin: auto;
+    font-family: 'Shrikhand', cursive;
+    color: yellow;
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: yellow;
+    width: 50%;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
 #navbar {
     opacity: .9;
     height: 60px;
@@ -128,7 +140,7 @@ body {
     margin-left: 20%;
     margin-right: 20%;
     border-radius: 8px;
-    margin-top: 10%;
+    margin-top: 30px;
     /* opacity:0.5 ; */
     border-width: 1px;
     font-size: 295%;
