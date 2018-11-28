@@ -100,7 +100,7 @@
     <div class="card-header">
       User Suggestions
     </div>
-    <div class="card-body">
+    <div id="suggestionsDiv" class="card-body">
         <table class="table" id="firebase-data">
             <thead>
               <tr>
@@ -108,7 +108,7 @@
                 <th>Said:</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody >
               <tr>
                 <td>Mark</td>
                 <td>This place sucked!</td>
@@ -124,6 +124,8 @@
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+<script src="js/suggestions.js"></script>
 <script src="js/hide.js"></script>
 <script src="js/Google.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8NiCJndcIn85_FDZyrsNSCwKpXYEddCY&libraries=places&callback=initAutocomplete"
