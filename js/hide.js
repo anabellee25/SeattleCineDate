@@ -2,10 +2,11 @@
 $(document).ready(function(){
 
     $("#navbar").hide();
-    $("#flightsDiv").hide();
+    $("#suggestions-area").hide();
     $("#placesArea").hide();
     $("#map").hide();
     $("#diningArea").hide();
+    $("#suggestions").hide();
 
 });
 
@@ -15,9 +16,10 @@ $("#submit").on("click", function(){
     $("#description").hide();
 
     $("#navbar").show();
-    $("#flightsDiv").show();
     $("#placesArea").show();
     $("#map").show();
+    $("#suggestions-area").show();
     $("#diningArea").show();
+    $("#suggestions").show();
 });
 

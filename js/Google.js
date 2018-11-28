@@ -6,8 +6,8 @@
       // parameter when you first load the API. For example:
     //   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8NiCJndcIn85_FDZyrsNSCwKpXYEddCY &libraries=places">
 
-   var latitude = "";
-   var longitude = "";
+   var latitude = "-33.8688";
+   var longitude = "151.2195";
 
     function initAutocomplete() {
       var map = new google.maps.Map(document.getElementById('map'), {
@@ -29,6 +29,8 @@
       // more details for that place.
       searchBox.addListener('places_changed', function() {
         var places = searchBox.getPlaces();
+        latitude = places[0].geometry.location.lat();
+        longitude = places[0].geometry.location.lng();
 
         if (places.length == 0) {
           return;
@@ -76,13 +78,18 @@
       $("#map").append(map);
     }
  
-    var latitude = places[0].geometry.location.lat() 
-    var longitude = places[0].geometry.location.lng()
-    var queryURL = "https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=" + latitude + "&longitude=" + longitute + "&api_key=QFHErTvRFbDe_tV7InD9eJtJgWqIUxsjrBZ0F_MNkvHFd6bMj4Bo-Tb5mC1MkkNpUeogb4poxe-EvLILWp7d0p2t8KUhR_k1AqpX_lrhbqtrPeRSQ3En3p93wK38W3Yx&limit=10";
-
+   var queryURL = "https://api.foursquare.com/v2/ven/search?ll=" + latitude + "," + longitude + "&client_id=FVJAEV5FM0DQNJ53YDGKFMX2NNLPSLJBU125EUQG2UQPKUMA&client_secret=GJC1RDRHEUE0MZNQF0IR4XCVP5DTYI30IARX1BO1SR1AJA02&v=20181227"
     $.ajax ({
       url: queryURL,
-      method: "GET"
+      method: "GET",
+      headers: {
+        // "Authorization": "Bearer " + APIKey,
+        // "Content-Type": "application/x-www-form-urlencoded",
+        // "Access-Control-Allow-Origin": "*",
+        // "Access-Control-Allow-Methods": "POST,GET,PUT,DELETE",
+        // "Access-Control-Allow-Headers": "Authorization, Lang"
+      }
+      
   })
   .then(function(response){
       var results = response.data;

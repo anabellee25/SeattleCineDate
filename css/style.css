@@ -45,16 +45,51 @@ body {
     
 }
 
-#flights-area {
+#suggestions-area {
     margin: auto;
     opacity: .9;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 80%;
+    margin:10px;  
+    width: 48%;
     border-radius: 0;
     border:rgb(70, 33, 33) solid 2px;
+    float: left;
+    
+
 }
 
+#sug-header {
+    font-size: 17px;
+}
+
+#formGroupExampleInput2 {
+    height: 150px;
+}
+
+#sug-button {
+    background-color: yellow;
+    color: red;
+    border: yellow 1px solid;
+
+}
+
+#suggestions {
+    margin: auto;
+    opacity: .9;
+    margin:10px;  
+    width: 48%;
+    border-radius: 0;
+    border:rgb(70, 33, 33) solid 2px;
+    float: left;
+    white-space: nowrap;
+    overflow: auto;
+    height:420px;
+}
+
+#firebase-data {
+    text-align: center;
+    padding: 14px;
+    font-size: 12px;
+}
 .card-header {
     font-family: 'Shrikhand', cursive;
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
@@ -65,21 +100,6 @@ body {
     background-color: rgb(70, 33, 33);
     border:rgb(70, 33, 33) solid 2px;
     border-radius: 0;
-}
-
-#flights {
-    white-space: nowrap;
-    overflow: auto;
-    color: black;
-    height: 150px;
-    border-radius: 0;
-}
-
-#genFlight {
-    display: inline-block;
-    text-align: center;
-    padding: 14px;
-
 }
 
 #placesArea {
