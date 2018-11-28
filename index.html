@@ -42,24 +42,7 @@
     <input id="pac-input" class="controls" type="text" placeholder="New Destination?">  
 </nav>
 
-<div class="row hidden" id="flightsDiv">
-  <div id="flights-area" class="card">
-    <div class="card-header">
-      Upcoming Weather Forecast
-    </div>
-    <div id="flights" class="d-inline-flex flex-row bd-highlight mb-3">
-        
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-            <div id="genFlight" class="p-2 bd-highlight"> and more recently with </div>
-    </div>
-  </div>
-</div>
+
 
 <div id="placesArea" class="card hidden">
     <div class="card-header">
@@ -92,6 +75,53 @@
       </div>  
   </div>
 </div>
+
+<div class="card" id= "suggestions-area">
+    <div class="card-header" id="sug-header">
+      Tell us about your experience at one of the suggested locations!
+    </div>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+              <label for="formGroupExampleInput">Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name/username">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Comments</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="add comment here">
+            </div>
+
+              <button id="sug-button" type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+    </div>
+  </div>
+
+  <div class="card" id="suggestions">
+    <div class="card-header">
+      User Suggestions
+    </div>
+    <div class="card-body">
+        <table class="table" id="firebase-data">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Said:</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>This place sucked!</td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Cool</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="js/hide.js"></script>
