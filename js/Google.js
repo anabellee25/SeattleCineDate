@@ -59,7 +59,7 @@ function NewMap(lat, lng) {
   var marker = new google.maps.Marker({ position: TheatreLocation, map: map });
 
 //clear out dining div
-$("#diningArea").empty();
+$("#appendHere").empty();
 
   var queryURL = 'https://api.foursquare.com/v2/venues/explore?ll='+ lat + ',' + lng +'&client_id=FVJAEV5FM0DQNJ53YDGKFMX2NNLPSLJBU125EUQG2UQPKUMA&v=20181127&client_secret=AKL35YSPSETLZTA3IW1IVQF4ASMPN0PYOPWQXF2JZIDP3KH2&limit=10';
   $.ajax({
