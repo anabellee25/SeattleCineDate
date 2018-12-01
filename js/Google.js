@@ -31,14 +31,13 @@ $.ajax({ url: API_CIN, method: "GET" })
       }
 
     }
-
-
   });
+
+
+
 
 function initMap() {
 
-  var Location1 = $("#pac-input").val();
-  console.log(Location1);
   // The location of Seattle on the map
   var Seattle = { lng: -122.3321, lat: 47.6062 };
   // The map, centered at Uluru
@@ -46,6 +45,9 @@ function initMap() {
     document.getElementById('map'), { zoom: 12, center: Seattle });
   // The marker, positioned at Uluru
 
+  map.addListener('click', function(e) {
+    placeMarker(e.latLng, map);
+});
 }
 
 // creates new map when theatre is clicked
@@ -55,11 +57,20 @@ function NewMap(lat, lng) {
   // The map, centered at the Theatre
   var map = new google.maps.Map(
     document.getElementById('map'), { zoom: 15, center: TheatreLocation });
+
   // The marker, positioned at the Theatre
-  var marker = new google.maps.Marker({ position: TheatreLocation, map: map });
+  var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
+  var marker = new google.maps.Marker({
+    position: TheatreLocation,
+    map: map,
+    icon: iconBase + 'map-icon-movie-theater.png'
+  });
+
+
+
 
 //clear out dining div
-$("#diningArea").empty();
+$("#appendHere").empty();
 
   var queryURL = 'https://api.foursquare.com/v2/venues/explore?ll='+ lat + ',' + lng +'&client_id=FVJAEV5FM0DQNJ53YDGKFMX2NNLPSLJBU125EUQG2UQPKUMA&v=20181127&client_secret=AKL35YSPSETLZTA3IW1IVQF4ASMPN0PYOPWQXF2JZIDP3KH2&limit=10';
   $.ajax({
@@ -70,10 +81,16 @@ $("#diningArea").empty();
       var results = response.response.groups[0].items;
 
       for (var i = 0; i < results.length; i++) {
+
+        marker = new google.maps.Marker({
+          position: new google.maps.LatLng(results[i].venue.location.lat, results[i].venue.location.lng),
+          map: map
+        });
+
+
         var newPlace = $("<div class='p-2 bd-highlight'>");
         var nameOfPlace = results[i].venue.name;
-
-        var p = $("<p>").text(nameOfPlace);
+        var p = $('<p>').text(nameOfPlace);
         var typeOfPlace = results[i].venue.categories[0].name;
 
         var t = $("<p>").text(typeOfPlace);
@@ -83,9 +100,9 @@ $("#diningArea").empty();
         newPlace.append(p);
         newPlace.append(t);
         newPlace.append(a);
-        $("#diningArea").append(newPlace);
+        $("#appendHere").append(newPlace);
 
       }
     });
   }
-  
+
