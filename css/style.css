@@ -2,9 +2,10 @@
 
 
 body {
-    background-image: url("../images/nightlife.jpg");
+    background-image: url("../images/rain.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
 #header{
@@ -12,18 +13,19 @@ body {
     margin-top: 20px;
     font-size: 440%;
     /* font-family: 'BenchNine', sans-serif; */
-    font-family: 'Shrikhand', cursive;
+    /* font-family: 'Shrikhand', cursive; *
+    /* font-family: ‘Lobster’, cursive;/ */
+    font-family: ‘Lobster’, cursive;
     /* color: white; */
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-    color: yellow;
+    /* text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue; */
+    color: yellowgreen;
 }
 
 #description {
     margin: auto;
     font-family: 'Shrikhand', cursive;
-    color: yellow;
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-    color: yellow;
+    /* text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue; */
+    color: yellowgreen;
     width: 50%;
     font-size: 20px;
     letter-spacing: 1px;
@@ -32,16 +34,16 @@ body {
 #navbar {
     opacity: .9;
     height: 60px;
-    border-bottom: 2px yellow solid;
-    background-color: rgb(70, 33, 33);
+    border-bottom: 2px blue;
+    background-color: gray;
     
 }
 
 #navbar-font {
-    font-family: 'Shrikhand', cursive;
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-    color: yellow;
-    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    /* text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue; */
+    color: yellowgreen;
+    font-size: 50px;
     
 }
 
@@ -50,9 +52,11 @@ body {
     opacity: .9;
     margin:10px;  
     width: 48%;
-    border-radius: 0;
-    border:rgb(70, 33, 33) solid 2px;
+    border-radius: 5px;
+    border:grey solid 5px;
     float: left;
+    
+
     
 
 }
@@ -66,9 +70,9 @@ body {
 }
 
 #sug-button {
-    background-color: yellow;
-    color: red;
-    border: yellow 1px solid;
+    background-color: yellowgreen;
+    color:blue;
+    border: gray 1px solid;
 
 }
 
@@ -78,11 +82,14 @@ body {
     margin:10px;  
     width: 48%;
     border-radius: 0;
-    border:rgb(70, 33, 33) solid 2px;
+    border:blue;
     float: left;
     white-space: nowrap;
     overflow: auto;
     height:420px;
+    border: gray 5px solid;
+    border-radius: 5px;
+   
 }
 
 #firebase-data {
@@ -91,15 +98,16 @@ body {
     font-size: 12px;
 }
 .card-header {
-    font-family: 'Shrikhand', cursive;
-    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
-    color: yellow;
+    font-family: 'Lobster', cursive;
+    /* text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, 0 -1px blue; */
+    color: yellowgreen;
     font-size: 20px;
-    height: 30px;
+    height: 40px;
     padding: 0 10px;
-    background-color: rgb(70, 33, 33);
-    border:rgb(70, 33, 33) solid 2px;
-    border-radius: 0;
+    background-color: gray;
+    border:grey solid 2px;
+    border-radius: 5px;
+    font-size: 28px;
 }
 
 #placesArea {
@@ -111,8 +119,8 @@ body {
     overflow: auto;
     display: inline-block;
     float: left;
-    border-radius: 0;
-    border:rgb(70, 33, 33) solid 2px;
+    border-radius: 5px;
+    border:grey solid 5px;
 }
 
 #map {
@@ -121,8 +129,8 @@ body {
     margin: 10px 15px;
     height: 600px;
     overflow: auto;
-    border-radius: 0;
-    border:rgb(70, 33, 33) solid 2px;
+    border-radius: 5px;
+    border:grey solid 5px;
 
 }
 
@@ -134,9 +142,9 @@ body {
     color:black ;
     overflow: auto;
     display: inline-block;
-    float: left;
-    border-radius: 0;
-    border:rgb(70, 33, 33) solid 2px;
+    /* float: left; */
+    border-radius: 5px;
+    border:gray solid 5px;
 }
 .card-header:first-child {
     border-radius: 0;
@@ -165,7 +173,7 @@ body {
     border-width: 1px;
     font-size: 295%;
     /* color: azure; */
-    border-color: rgb(0,0,0,0.5);
+    border-color: grey 5px solid;
     /* font-family: 'BenchNine', sans-serif; */
     font-family: 'Shrikhand', cursive;
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
@@ -177,5 +185,6 @@ body {
     background-color: yellow;
     color: red;
     border: yellow 1px solid;
+    border-width: 6px;
 
 }
