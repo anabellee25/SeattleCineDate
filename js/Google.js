@@ -27,7 +27,7 @@ $.ajax({ url: API_CIN, method: "GET" })
         lat = response.cinemas[i].location.lat;
         lng = response.cinemas[i].location.lon;
         // append each theatre to the list
-        $("#placesArea").append('<li><a href="#" onclick="NewMap(' + lat + ',' + lng + ');return false;">' + response.cinemas[i].name + '</a></li>');
+        $("#placesArea").append('<ul><a id="theaters" href="#" onclick="NewMap(' + lat + ',' + lng + ');return false;">' + response.cinemas[i].name + '</a></ul>');
       }
 
     }
@@ -59,9 +59,9 @@ function NewMap(lat, lng) {
   var marker = new google.maps.Marker({ position: TheatreLocation, map: map });
 
 //clear out dining div
-$("#diningArea").empty();
+$("#appendHere").empty();
 
-  var queryURL = 'https://api.foursquare.com/v2/venues/explore?ll='+ lat + ',' + lng +'&client_id=FVJAEV5FM0DQNJ53YDGKFMX2NNLPSLJBU125EUQG2UQPKUMA&v=20181127&client_secret=AKL35YSPSETLZTA3IW1IVQF4ASMPN0PYOPWQXF2JZIDP3KH2&limit=10';
+  var queryURL = 'https://api.foursquare.com/v2/venues/explore?ll='+ lat + ',' + lng +'&client_id=FVJAEV5FM0DQNJ53YDGKFMX2NNLPSLJBU125EUQG2UQPKUMA&v=20181127&client_secret=AKL35YSPSETLZTA3IW1IVQF4ASMPN0PYOPWQXF2JZIDP3KH2&limit=20';
   $.ajax({
     url: queryURL,
     method: "GET",
@@ -73,19 +73,20 @@ $("#diningArea").empty();
         var newPlace = $("<div class='p-2 bd-highlight'>");
         var nameOfPlace = results[i].venue.name;
 
-        var p = $("<p>").text(nameOfPlace);
+        var p = $("<tr id='place'>").text(nameOfPlace);
         var typeOfPlace = results[i].venue.categories[0].name;
 
-        var t = $("<p>").text(typeOfPlace);
+        var t = $("<tr id='typeOfPlace'>").text(typeOfPlace);
         var address = results[i].venue.location.formattedAddress;
 
-        var a = $("<p>").text(address);
+        var a = $("<tr id='addressofPlace'>").text(address);
         newPlace.append(p);
         newPlace.append(t);
         newPlace.append(a);
-        $("#diningArea").append(newPlace);
+        $("#appendHere").prepend(newPlace);
 
       }
     });
   }
   
+ 

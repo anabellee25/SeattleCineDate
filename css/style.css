@@ -53,8 +53,13 @@ body {
     border-radius: 0;
     border:rgb(70, 33, 33) solid 2px;
     float: left;
+    font-family: 'Laila', serif;
     
 
+}
+
+#firebase-data {
+    font-family: 'Laila', serif;
 }
 
 #sug-header {
@@ -100,6 +105,7 @@ body {
     background-color: rgb(70, 33, 33);
     border:rgb(70, 33, 33) solid 2px;
     border-radius: 0;
+    position: sticky;
 }
 
 #placesArea {
@@ -166,11 +172,9 @@ body {
     font-size: 295%;
     /* color: azure; */
     border-color: rgb(0,0,0,0.5);
-    /* font-family: 'BenchNine', sans-serif; */
-    font-family: 'Shrikhand', cursive;
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
     color: yellow;
-    
+    font-family: 'Laila', serif;
 
 }
 #submit {
@@ -179,3 +183,28 @@ body {
     border: yellow 1px solid;
 
 }
+
+#theaters {
+    color: black;
+    font-family: 'Laila', serif;
+    font-size: 18px;
+}
+
+#place {
+    font-weight: bolder;
+    font-family: 'Laila', serif;
+    font-size: 18px;
+
+}
+
+#typeOfPlace {
+    font-style: italic;
+    font-size: 14px;
+    font-family: 'Laila', serif;
+}
+
+#addressofPlace {
+    font-size: 15px;
+    font-family: 'Laila', serif;
+}
+
