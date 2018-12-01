@@ -109,17 +109,10 @@ body {
     font-size: 20px;
     height: 40px;
     padding: 0 10px;
-<<<<<<< HEAD
-    background-color: rgb(70, 33, 33);
-    border:rgb(70, 33, 33) solid 2px;
-    border-radius: 0;
-    position: sticky;
-=======
     background-color: gray;
     border:grey solid 2px;
     border-radius: 5px;
-    font-size: 28px;
->>>>>>> 5cd24d64d562b09e87ead0e2d2d2e7f342f68d21
+    font-size: 23px;
 }
 
 #placesArea {
@@ -185,13 +178,9 @@ body {
     border-width: 1px;
     font-size: 295%;
     /* color: azure; */
-<<<<<<< HEAD
-    border-color: rgb(0,0,0,0.5);
-=======
     border-color: grey 5px solid;
     /* font-family: 'BenchNine', sans-serif; */
     font-family: 'Shrikhand', cursive;
->>>>>>> 5cd24d64d562b09e87ead0e2d2d2e7f342f68d21
     text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
     color: yellow;
     font-family: 'Laila', serif;
