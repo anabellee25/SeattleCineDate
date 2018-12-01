@@ -9,7 +9,7 @@
 // API Call to the Json file and grabs all data and will then filter through and grab only cinemas
 
 $( document ).ready(function() {
-  console.log( "ready!" );
+  // console.log( "ready!" );
 
 });
 
@@ -18,7 +18,7 @@ var lat, lng;
 // Create an AJAX call to retrieve data Log the data in console
 $.ajax({ url: API_CIN, method: "GET" })
   .then(function (response) {
-    console.log("cinemas: " + response);
+    // console.log("cinemas: " + response);
     for (var i = 0; i < response.cinemas.length; i++) {
       //search through the file and grab any location that is a cinema
       if (response.cinemas[i].location.address.city === "Seattle") {
@@ -38,7 +38,7 @@ $.ajax({ url: API_CIN, method: "GET" })
 function initMap() {
 
   var Location1 = $("#pac-input").val();
-  console.log(Location1);
+  // console.log(Location1);
   // The location of Seattle on the map
   var Seattle = { lng: -122.3321, lat: 47.6062 };
   // The map, centered at Uluru
@@ -68,10 +68,11 @@ $("#appendHere").empty();
   })
     .then(function (response) {
       var results = response.response.groups[0].items;
-
+      
       for (var i = 0; i < results.length; i++) {
         var newPlace = $("<div class='p-2 bd-highlight'>");
         var nameOfPlace = results[i].venue.name;
+        console.log(nameOfPlace);
 
         var p = $("<tr id='place'>").text(nameOfPlace);
         var typeOfPlace = results[i].venue.categories[0].name;
