@@ -91,7 +91,7 @@ body {
     float: left;
     white-space: nowrap;
     overflow: auto;
-    height:420px;
+    height:425px;
     border: gray 5px solid;
     border-radius: 5px;
    
@@ -218,3 +218,149 @@ body {
     font-family: 'Laila', serif;
 }
 
+@media only screen and (max-width: 980px) {
+    .card-header {
+        font-size: 18px;
+        height: 30px;
+    }
+    
+    #placesArea {
+        width: 47%;
+    }
+
+    #diningArea{
+        width: 47%;
+
+    }
+
+    #map {
+        float: right;
+        width: 98%;
+    }
+
+    #suggestions-area {
+        width: 47%;
+
+    }
+
+    #suggestionsDiv{
+        width: 47%;
+
+    }
+
+    #firebase-data {
+        width: 400px;
+    }
+    }
+    @media screen and (max-width:768px) {
+
+        #suggestions-area {
+            width: 45%;
+            font-size: 8px;
+            height: 425px;
+    
+        }
+
+        #sug-header {
+            height: 50px;
+        }
+    
+        #suggestionsDiv{
+            width: 45%;
+    
+        }
+    
+        #firebase-data {
+            width: 300px;
+    }
+    }
+
+    @media screen and (max-width:640px) {
+        .card-header {
+            font-size: 16px;
+            height: 30px;
+        }
+        
+        #placesArea {
+            width: 45%;
+            height: 400px;
+        
+        }
+    
+        #diningArea{
+            width: 45%;
+            height: 400px;
+    
+        }
+    
+        #map {
+            float: left;
+            width: 98%;
+            margin: auto;
+        }
+    
+        #suggestions-area {
+            width: 45%;
+            font-size: 12px;
+    
+        }
+    
+        #suggestionsDiv{
+            width: 45%;
+    
+        }
+    
+        #firebase-data {
+            width: 260px;
+        }
+
+    }
+    @media screen and (max-width:640px) {
+         
+        .card-header {
+            font-size: 16px;
+            height: 30px;
+        }
+        #placesArea {
+            width: 95%;
+            height: 300px;
+            margin: 10px;
+        
+        }
+    
+        #diningArea{
+            width: 95%;
+            height: 300px;
+            margin: 10px;
+    
+        }
+    
+        #map {
+            float: right;
+            width: 95%;
+            margin: 10px;
+            height: 500px;
+        }
+    
+        #suggestions-area {
+            width: 95%;
+            font-size: 12px;
+    
+        }
+    
+        #suggestionsDiv{
+            width: 95%;
+            height: 35px;
+    
+        }
+    
+        #firebase-data {
+            width: 300px;
+        }
+
+        #suggestions {
+            width: 95%;
+            height: 350px;
+        }
+
+    }
