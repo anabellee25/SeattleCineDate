@@ -1,6 +1,7 @@
 # Seattle CineDate
 
 **Contributors:** 
+
 Ana Lee - *Front End and FourSquare API.*
 
 Houston Moses - *Front End*
